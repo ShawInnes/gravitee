@@ -1,6 +1,9 @@
 ---
 driver:
   name: vagrant
+  network:
+  - ["forwarded_port", {guest: 8082, host: 8082}]
+  - ["private_network", {ip: "192.168.33.33"}]
 
 provisioner:
   name: chef_zero
@@ -13,8 +16,7 @@ verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-16.04
-  - name: centos-7.3
+  - name: centos-7.2
 
 suites:
   - name: default
