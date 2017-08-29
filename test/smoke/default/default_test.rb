@@ -23,12 +23,3 @@ end
 describe port(9300) do
   it { should be_listening }
 end
-
-# Test for Gravitee
-describe directory('/opt/gravitee/graviteeio-gateway-1.8.4') do
-  it { should be_directory }
-end
-
-describe port(8082) do
-  it { should be_listening }
-end

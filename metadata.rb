@@ -7,6 +7,7 @@ long_description 'Installs/Configures gravitee'
 version '0.1.0'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 
+depends 'yum-epel'
 depends 'java'
 depends 'sc-mongodb'
 depends 'elasticsearch'
